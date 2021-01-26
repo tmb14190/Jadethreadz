@@ -1,1 +1,2 @@
 # Jadethreadz
+Ecommerce website in development for mask making business, setup to run on a linode ubuntu 20 servlet, utilising uswgi and nginx, created within Django it has the capacity for users to select an item, add it to basket (held with session storage) and then checkout their basket using paypal. Works for client to easily add new items to sql database and read orders taken. In sore need of HTML clean up, and currently in limbo awaiting client to provide data and front-end look design. 
