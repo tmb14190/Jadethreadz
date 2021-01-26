@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=3.0, minimum-scale=0.75">
+        <title> {% block head %} Fabric {% endblock %} </title>
+        <link rel="shortcut icon" href="{% static 'basic/images/jadethreadz_logo.png' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'basic/fabric.css' %}" />
+    </head>
+    <body>
+    <div class="topbar" id="navbar">
+        <div class="container" onclick="openNav()">
+            <div class="bar1" id="b1"></div>
+            <div class="bar2" id="b2"></div>
+            <div class="bar3" id="b3"></div>
+        </div>
+        
+        <span class="fml">
+            <div class="logo">
+                <a href="{% url 'basic:home' %}">
+                    <img src="{% static 'basic/images/jadethreadz_logo_simple.png' %}" class = "logo_img">
+                </a>
+            </div> 
+            <div class="title_text">Jadethreadz </div>
+        </span>
+        
+        <span class="basket">
+            <div class="b-icon">
+                <a href="{% url 'shop:basket' %}">
+                    <img src="{% static 'basic/images/basket.png' %}" class = "b-img">
+                    <div class="basket_txt" id="bask_txt"></div>
+                </a>
+            </div>    
+        </span>
+
+        <span class="social">
+            <div class="f-icon">
+                <input type="image" src="{% static 'basic/images/f-icon.png' %}" class = "f-img"  onclick="fbook()">
+            </div>
+            <div class="i-icon">
+                <input type="image" src="{% static 'basic/images/i-icon.png' %}" class = "i-img"  onclick="igram()">
+            </div>    
+        </span>
+    </div>
+    
+    <div id="mySidebar" class="sidebar">
+        <div class="containerMenu" id="close_btn" onclick="closeNav()">
+            <div class="bar1M"></div>
+            <div class="bar2M"></div>
+            <div class="bar3M"></div>
+        </div>
+        <div class="sidebar-content">
+            <a href="{% url 'basic:home' %}">Home</a>
+            <a href="{% url 'shop:shop' %}">Shop</a>
+            <a href="{% url 'basic:fabric' %}">Fabric</a>
+            <a href="{% url 'basic:about' %}">About</a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="column">
+            <div class="fab1con">
+                <img src="{% static 'basic/images/fabric1.png' %}">
+                <button class="fab1btn" onclick="addItem(1); ">Add to Basket</button>
+            </div>
+            <img src="{% static 'basic/images/fabric2.png' %}">
+            <img src="{% static 'basic/images/fabric3.png' %}">
+            <img src="{% static 'basic/images/fabric4.png' %}">
+            <img src="{% static 'basic/images/fabric5.png' %}">
+            <img src="{% static 'basic/images/fabric6.png' %}">
+            <img src="{% static 'basic/images/fabric7.png' %}">
+        </div>
+        <div class="column">
+            <img src="{% static 'basic/images/fabric8.png' %}">
+            <img src="{% static 'basic/images/fabric9.png' %}">
+            <img src="{% static 'basic/images/fabric10.png' %}">
+            <img src="{% static 'basic/images/fabric11.png' %}">
+            <img src="{% static 'basic/images/fabric12.png' %}">
+            <img src="{% static 'basic/images/fabric13.png' %}">
+            <img src="{% static 'basic/images/fabric14.png' %}">
+        </div>
+        <div class="column">
+            <img src="{% static 'basic/images/fabric15.png' %}">
+            <img src="{% static 'basic/images/fabric16.png' %}">
+            <img src="{% static 'basic/images/fabric17.png' %}">
+            <img src="{% static 'basic/images/fabric18.png' %}">
+            <img src="{% static 'basic/images/fabric19.png' %}">
+            <img src="{% static 'basic/images/fabric20.png' %}">
+            <img src="{% static 'basic/images/fabric21.png' %}">
+        </div>
+        <div class="column">
+            <img src="{% static 'basic/images/fabric22.png' %}">
+            <img src="{% static 'basic/images/fabric23.png' %}">
+            <img src="{% static 'basic/images/fabric24.png' %}">
+            <img src="{% static 'basic/images/fabric25.png' %}">
+            <img src="{% static 'basic/images/fabric26.png' %}">
+            <img src="{% static 'basic/images/fabric27.png' %}">
+        </div>
+    </div>
+        <div class="footer">    
+        <div class ="footer_contact">
+            <h3> Contact </h3>
+            <a href="fbook()">Facebook</a>
+            <a href="igram()">Instagram</a>
+            <a> jadethreadz@gmail.com </a>
+        </div>
+    </div>
+    <script type="text/javascript" src=" {% static 'basic/home.js' %}"></script>
+    </body>
+</html>
